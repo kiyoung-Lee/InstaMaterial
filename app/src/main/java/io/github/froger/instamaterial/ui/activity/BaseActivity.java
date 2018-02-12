@@ -18,7 +18,7 @@ public class BaseActivity extends AppCompatActivity {
 
     @Nullable
     @BindView(R.id.toolbar)
-    Toolbar toolbar;
+    public Toolbar toolbar;
 
     @Nullable
     @BindView(R.id.ivLogo)

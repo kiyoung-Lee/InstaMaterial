@@ -1,4 +1,4 @@
-package io.github.froger.instamaterial.ui.activity;
+package io.github.froger.instamaterial.ui.activity.Main;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -18,6 +18,10 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import io.github.froger.instamaterial.R;
 import io.github.froger.instamaterial.Utils;
+import io.github.froger.instamaterial.ui.activity.BaseDrawerActivity;
+import io.github.froger.instamaterial.ui.activity.Comment.CommentsActivity;
+import io.github.froger.instamaterial.ui.activity.Photo.TakePhotoActivity;
+import io.github.froger.instamaterial.ui.activity.Profile.UserProfileActivity;
 import io.github.froger.instamaterial.ui.adapter.FeedAdapter;
 import io.github.froger.instamaterial.ui.adapter.FeedItemAnimator;
 import io.github.froger.instamaterial.ui.view.FeedContextMenu;

@@ -1,4 +1,4 @@
-package io.github.froger.instamaterial.ui.activity;
+package io.github.froger.instamaterial.ui.activity.Profile;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,6 +17,7 @@ import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import io.github.froger.instamaterial.R;
+import io.github.froger.instamaterial.ui.activity.BaseDrawerActivity;
 import io.github.froger.instamaterial.ui.adapter.UserProfileAdapter;
 import io.github.froger.instamaterial.ui.utils.CircleTransformation;
 import io.github.froger.instamaterial.ui.view.RevealBackgroundView;

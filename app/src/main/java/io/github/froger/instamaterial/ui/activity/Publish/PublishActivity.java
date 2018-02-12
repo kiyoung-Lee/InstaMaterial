@@ -1,4 +1,4 @@
-package io.github.froger.instamaterial.ui.activity;
+package io.github.froger.instamaterial.ui.activity.Publish;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -20,6 +20,8 @@ import butterknife.BindView;
 import butterknife.OnCheckedChanged;
 import io.github.froger.instamaterial.R;
 import io.github.froger.instamaterial.Utils;
+import io.github.froger.instamaterial.ui.activity.BaseActivity;
+import io.github.froger.instamaterial.ui.activity.Main.MainActivity;
 
 /**
  * Created by Miroslaw Stanek on 21.02.15.

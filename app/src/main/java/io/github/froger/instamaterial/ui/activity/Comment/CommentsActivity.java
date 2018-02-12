@@ -1,4 +1,4 @@
-package io.github.froger.instamaterial.ui.activity;
+package io.github.froger.instamaterial.ui.activity.Comment;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import butterknife.BindView;
 import io.github.froger.instamaterial.R;
 import io.github.froger.instamaterial.Utils;
+import io.github.froger.instamaterial.ui.activity.BaseDrawerActivity;
 import io.github.froger.instamaterial.ui.adapter.CommentsAdapter;
 import io.github.froger.instamaterial.ui.view.SendCommentButton;
 

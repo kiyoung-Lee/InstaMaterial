@@ -15,6 +15,7 @@ import butterknife.BindView;
 import butterknife.BindDimen;
 import butterknife.BindString;
 import io.github.froger.instamaterial.R;
+import io.github.froger.instamaterial.ui.activity.Profile.UserProfileActivity;
 import io.github.froger.instamaterial.ui.utils.CircleTransformation;
 
 /**

@@ -1,4 +1,4 @@
-package io.github.froger.instamaterial.ui.activity;
+package io.github.froger.instamaterial.ui.activity.Photo;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -37,6 +37,8 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import io.github.froger.instamaterial.R;
 import io.github.froger.instamaterial.Utils;
+import io.github.froger.instamaterial.ui.activity.BaseActivity;
+import io.github.froger.instamaterial.ui.activity.Publish.PublishActivity;
 import io.github.froger.instamaterial.ui.adapter.PhotoFiltersAdapter;
 import io.github.froger.instamaterial.ui.view.RevealBackgroundView;
 
