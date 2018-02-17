@@ -15,6 +15,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import io.github.froger.instamaterial.R;
 import io.github.froger.instamaterial.Utils;
@@ -39,7 +41,7 @@ public class CommentsActivity extends BaseDrawerActivity implements SendCommentB
     @BindView(R.id.btnSendComment)
     SendCommentButton btnSendComment;
 
-    private CommentsAdapter commentsAdapter;
+    public CommentsAdapter commentsAdapter;
     private int drawingStartLocation;
 
     @Override
