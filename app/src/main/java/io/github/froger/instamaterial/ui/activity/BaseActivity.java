@@ -9,12 +9,13 @@ import android.widget.ImageView;
 
 import butterknife.ButterKnife;
 import butterknife.BindView;
+import dagger.android.support.DaggerAppCompatActivity;
 import io.github.froger.instamaterial.R;
 
 /**
  * Created by Miroslaw Stanek on 19.01.15.
  */
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends DaggerAppCompatActivity {
 
     @Nullable
     @BindView(R.id.toolbar)
