@@ -27,7 +27,7 @@ import io.github.froger.instamaterial.ui.view.SendCommentButton;
 /**
  * Created by froger_mcs on 11.11.14.
  */
-public class CommentsActivity extends BaseDrawerActivity implements SendCommentButton.OnSendClickListener {
+public class CommentsActivity extends BaseDrawerActivity implements CommentContract.ActivityView, SendCommentButton.OnSendClickListener {
     public static final String ARG_DRAWING_START_LOCATION = "arg_drawing_start_location";
 
     @BindView(R.id.contentRoot)
@@ -41,6 +41,8 @@ public class CommentsActivity extends BaseDrawerActivity implements SendCommentB
     @BindView(R.id.btnSendComment)
     SendCommentButton btnSendComment;
 
+    @Inject
+    public CommentPresenterImpl mPresenter;
     public CommentsAdapter commentsAdapter;
     private int drawingStartLocation;
 

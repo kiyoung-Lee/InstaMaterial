@@ -5,4 +5,12 @@ package io.github.froger.instamaterial.ui.activity.Comment;
  */
 
 public interface CommentContract {
+
+    interface ActivityView{
+
+    }
+
+    interface Presenter{
+
+    }
 }
