@@ -10,6 +10,8 @@ import io.github.froger.instamaterial.ui.activity.Comment.Data.CommentRepository
 
 public class CommentPresenterImpl implements CommentContract.Presenter{
 
-    @Inject
     CommentRepository repository;
+
+    public CommentPresenterImpl() {
+    }
 }

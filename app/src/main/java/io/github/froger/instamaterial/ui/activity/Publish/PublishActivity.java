@@ -26,7 +26,7 @@ import io.github.froger.instamaterial.ui.activity.Main.MainActivity;
 /**
  * Created by Miroslaw Stanek on 21.02.15.
  */
-public class PublishActivity extends BaseActivity {
+public class PublishActivity extends BaseActivity implements PublishContract.ActivityView {
     public static final String ARG_TAKEN_PHOTO_URI = "arg_taken_photo_uri";
 
     @BindView(R.id.tbFollowers)

@@ -25,7 +25,7 @@ import io.github.froger.instamaterial.ui.view.RevealBackgroundView;
 /**
  * Created by Miroslaw Stanek on 14.01.15.
  */
-public class UserProfileActivity extends BaseDrawerActivity implements RevealBackgroundView.OnStateChangeListener {
+public class UserProfileActivity extends BaseDrawerActivity implements RevealBackgroundView.OnStateChangeListener, UserProfileContract.ActivityView {
     public static final String ARG_REVEAL_START_LOCATION = "reveal_start_location";
 
     private static final int USER_OPTIONS_ANIMATION_DELAY = 300;
