@@ -12,6 +12,8 @@ public class CommentPresenterImpl implements CommentContract.Presenter{
 
     CommentRepository repository;
 
-    public CommentPresenterImpl() {
+    @Inject
+    public CommentPresenterImpl(CommentRepository repository) {
+        this.repository = repository;
     }
 }

@@ -15,11 +15,10 @@ import io.github.froger.instamaterial.ui.adapter.CommentsAdapter;
  */
 
 @Module
-public class CommentModule {
+public abstract class CommentModule {
 
     @ActivityScope
-    @Inject
-    CommentContract.Presenter commentPresenter(){
-        return new CommentPresenterImpl();
-    }
+    @Binds
+    abstract CommentContract.Presenter commentPresenter(CommentPresenterImpl presenter);
+
 }
