@@ -5,4 +5,12 @@ package io.github.froger.instamaterial.ui.activity.Main;
  */
 
 public interface MainContract {
+
+    interface ActivityView{
+
+    }
+
+    interface Presenter{
+
+    }
 }

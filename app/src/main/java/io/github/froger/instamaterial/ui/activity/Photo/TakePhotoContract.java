@@ -5,4 +5,12 @@ package io.github.froger.instamaterial.ui.activity.Photo;
  */
 
 public interface TakePhotoContract {
+
+    interface ActivitiyView{
+
+    }
+
+    interface Presenter{
+
+    }
 }

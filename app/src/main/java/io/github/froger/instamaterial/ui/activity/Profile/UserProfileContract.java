@@ -5,4 +5,12 @@ package io.github.froger.instamaterial.ui.activity.Profile;
  */
 
 public interface UserProfileContract {
+
+    interface ActivityView{
+
+    }
+
+    interface Presenter{
+
+    }
 }

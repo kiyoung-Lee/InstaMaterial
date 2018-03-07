@@ -15,7 +15,7 @@ import io.github.froger.instamaterial.R;
 /**
  * Created by Miroslaw Stanek on 19.01.15.
  */
-public class BaseActivity extends DaggerAppCompatActivity {
+public class BaseActivity extends AppCompatActivity {
 
     @Nullable
     @BindView(R.id.toolbar)

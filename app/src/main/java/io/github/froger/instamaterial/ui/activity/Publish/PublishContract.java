@@ -5,4 +5,12 @@ package io.github.froger.instamaterial.ui.activity.Publish;
  */
 
 public interface PublishContract {
+
+    interface ActivityView{
+
+    }
+
+    interface Presenter{
+
+    }
 }

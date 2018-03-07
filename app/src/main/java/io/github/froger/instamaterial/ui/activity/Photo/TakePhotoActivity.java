@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -46,7 +47,7 @@ import io.github.froger.instamaterial.ui.view.RevealBackgroundView;
  * Created by Miroslaw Stanek on 08.02.15.
  */
 public class TakePhotoActivity extends BaseActivity implements RevealBackgroundView.OnStateChangeListener,
-        CameraHostProvider {
+        CameraHostProvider, TakePhotoContract.ActivitiyView {
     public static final String ARG_REVEAL_START_LOCATION = "reveal_start_location";
 
     private static final Interpolator ACCELERATE_INTERPOLATOR = new AccelerateInterpolator();

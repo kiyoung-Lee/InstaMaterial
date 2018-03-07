@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -29,7 +30,7 @@ import io.github.froger.instamaterial.ui.view.FeedContextMenuManager;
 
 
 public class MainActivity extends BaseDrawerActivity implements FeedAdapter.OnFeedItemClickListener,
-        FeedContextMenu.OnFeedContextMenuItemClickListener {
+        FeedContextMenu.OnFeedContextMenuItemClickListener, MainContract.ActivityView {
     public static final String ACTION_SHOW_LOADING_ITEM = "action_show_loading_item";
 
     private static final int ANIM_DURATION_TOOLBAR = 300;
