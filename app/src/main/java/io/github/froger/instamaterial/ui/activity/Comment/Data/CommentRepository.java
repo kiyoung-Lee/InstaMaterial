@@ -5,4 +5,6 @@ package io.github.froger.instamaterial.ui.activity.Comment.Data;
  */
 
 public interface CommentRepository {
+
+    void writeLog();
 }

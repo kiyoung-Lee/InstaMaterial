@@ -5,4 +5,10 @@ package io.github.froger.instamaterial.ui.activity.Comment.Data;
  */
 
 public class CommentRepositoryImpl implements CommentRepository {
+
+
+    @Override
+    public void writeLog() {
+        System.out.print("DI Success");
+    }
 }

@@ -18,20 +18,7 @@ import io.github.froger.instamaterial.ui.activity.Comment.Data.CommentRepository
  */
 
 @Singleton
-@Component(modules = {
-        ApplicationModule.class,
-        ActivityBindingModule.class,
-        AndroidSupportInjectionModule.class})
-public interface AppComponent extends AndroidInjector<InstaMaterialApplication> {
+@Component(modules = { ApplicationModule.class })
+public interface AppComponent  {
 
-    CommentRepository getCommentRepository();
-
-    @Component.Builder
-    interface Builder {
-
-        @BindsInstance
-        AppComponent.Builder application(Application application);
-
-        AppComponent build();
-    }
 }

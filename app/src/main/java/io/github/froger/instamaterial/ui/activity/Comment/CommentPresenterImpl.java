@@ -16,4 +16,10 @@ public class CommentPresenterImpl implements CommentContract.Presenter{
     public CommentPresenterImpl(CommentRepository repository) {
         this.repository = repository;
     }
+
+
+    @Override
+    public void test() {
+        repository.writeLog();
+    }
 }

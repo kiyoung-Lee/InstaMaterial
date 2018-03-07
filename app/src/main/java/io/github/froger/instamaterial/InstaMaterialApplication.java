@@ -2,22 +2,27 @@ package io.github.froger.instamaterial;
 
 import android.app.Application;
 
-import dagger.android.AndroidInjector;
-import dagger.android.DaggerApplication;
+
+import io.github.froger.instamaterial.di.AppComponent;
+import io.github.froger.instamaterial.di.ApplicationModule;
+import io.github.froger.instamaterial.di.DaggerAppComponent;
 import timber.log.Timber;
 
 /**
  * Created by froger_mcs on 05.11.14.
  */
-public class InstaMaterialApplication extends DaggerApplication {
+public class InstaMaterialApplication extends Application {
+
+    AppComponent appComponent;
+
     @Override
     public void onCreate() {
         super.onCreate();
-        Timber.plant(new Timber.DebugTree());
-    }
 
-    @Override
-    protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        return DaggerAppComponent.builder().application(this).build();
+        appComponent = DaggerAppComponent.builder()
+                .applicationModule(new ApplicationModule(this))
+                .build();
+
+        Timber.plant(new Timber.DebugTree());
     }
 }

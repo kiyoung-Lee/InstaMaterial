@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -18,6 +19,7 @@ import android.widget.LinearLayout;
 import javax.inject.Inject;
 
 import butterknife.BindView;
+import io.github.froger.instamaterial.InstaMaterialApplication;
 import io.github.froger.instamaterial.R;
 import io.github.froger.instamaterial.Utils;
 import io.github.froger.instamaterial.ui.activity.BaseDrawerActivity;
@@ -41,8 +43,10 @@ public class CommentsActivity extends BaseDrawerActivity implements CommentContr
     @BindView(R.id.btnSendComment)
     SendCommentButton btnSendComment;
 
+    private CommentComponent commentComponent;
+
     @Inject
-    public CommentPresenterImpl mPresenter;
+    public CommentContract.Presenter mPresenter;
     public CommentsAdapter commentsAdapter;
     private int drawingStartLocation;
 
@@ -50,6 +54,12 @@ public class CommentsActivity extends BaseDrawerActivity implements CommentContr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comments);
+
+        commentComponent = DaggerCommentComponent.builder()
+                .commentModule(new CommentModule(this))
+                .build();
+        commentComponent.inject(this);
+
         setupComments();
         setupSendCommentButton();
 
@@ -64,6 +74,8 @@ public class CommentsActivity extends BaseDrawerActivity implements CommentContr
                 }
             });
         }
+
+        mPresenter.test();
     }
 
     private void setupComments() {
@@ -118,18 +130,18 @@ public class CommentsActivity extends BaseDrawerActivity implements CommentContr
 
     @Override
     public void onBackPressed() {
-        ViewCompat.setElevation(getToolbar(), 0);
-        contentRoot.animate()
-                .translationY(Utils.getScreenHeight(this))
-                .setDuration(200)
-                .setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        CommentsActivity.super.onBackPressed();
-                        overridePendingTransition(0, 0);
-                    }
-                })
-                .start();
+//        ViewCompat.setElevation(getToolbar(), 0);
+//        contentRoot.animate()
+//                .translationY(Utils.getScreenHeight(this))
+//                .setDuration(200)
+//                .setListener(new AnimatorListenerAdapter() {
+//                    @Override
+//                    public void onAnimationEnd(Animator animation) {
+//                        CommentsActivity.super.onBackPressed();
+//                        overridePendingTransition(0, 0);
+//                    }
+//                })
+//                .start();
     }
 
     @Override

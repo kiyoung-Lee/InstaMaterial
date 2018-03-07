@@ -11,6 +11,6 @@ public interface CommentContract {
     }
 
     interface Presenter{
-
+        void test();
     }
 }
