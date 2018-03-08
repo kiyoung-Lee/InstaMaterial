@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 import io.github.froger.instamaterial.R;
@@ -43,7 +45,12 @@ public class MainActivity extends BaseDrawerActivity implements FeedAdapter.OnFe
     @BindView(R.id.content)
     CoordinatorLayout clContent;
 
-    private FeedAdapter feedAdapter;
+    private MainComponent component;
+
+    @Inject
+    public MainContract.Presenter presenter;
+    @Inject
+    public FeedAdapter feedAdapter;
 
     private boolean pendingIntroAnimation;
 
@@ -51,6 +58,12 @@ public class MainActivity extends BaseDrawerActivity implements FeedAdapter.OnFe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        component = DaggerMainComponent.builder()
+                .mainModule(new MainModule(this))
+                .build();
+        component.inject(this);
+
         setupFeed();
 
         if (savedInstanceState == null) {
@@ -69,7 +82,6 @@ public class MainActivity extends BaseDrawerActivity implements FeedAdapter.OnFe
         };
         rvFeed.setLayoutManager(linearLayoutManager);
 
-        feedAdapter = new FeedAdapter(this);
         feedAdapter.setOnFeedItemClickListener(this);
         rvFeed.setAdapter(feedAdapter);
         rvFeed.setOnScrollListener(new RecyclerView.OnScrollListener() {

@@ -47,6 +47,7 @@ public class CommentsActivity extends BaseDrawerActivity implements CommentContr
 
     @Inject
     public CommentContract.Presenter mPresenter;
+    @Inject
     public CommentsAdapter commentsAdapter;
     private int drawingStartLocation;
 
@@ -83,7 +84,6 @@ public class CommentsActivity extends BaseDrawerActivity implements CommentContr
         rvComments.setLayoutManager(linearLayoutManager);
         rvComments.setHasFixedSize(true);
 
-        commentsAdapter = new CommentsAdapter(this);
         rvComments.setAdapter(commentsAdapter);
         rvComments.setOverScrollMode(View.OVER_SCROLL_NEVER);
         rvComments.setOnScrollListener(new RecyclerView.OnScrollListener() {
