@@ -41,4 +41,9 @@ public class CommentModule {
         return new CommentPresenterImpl(new CommentRepositoryImpl());
     }
 
+    @ActivityScope
+    @Provides
+    CommentsAdapter commentAdapter(){
+        return new CommentsAdapter(activity);
+    }
 }
